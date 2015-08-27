@@ -10,7 +10,7 @@ namespace Roots\Sage\Assets;
  *
  * Enqueue scripts in the following order:
  * 1. /theme/dist/scripts/modernizr.js
- * 2. /theme/dist/scripts/main.js
+ * 2. /theme/dist/scripts/index.js
  */
 
 class JsonManifest {
@@ -54,7 +54,7 @@ function asset_path($filename) {
   static $manifest;
 
   if (empty($manifest)) {
-    $manifest_path = get_template_directory() . DIST_DIR . 'assets.json';
+    $manifest_path = get_template_directory() . DIST_DIR . '/webpack-assets.json';
     $manifest = new JsonManifest($manifest_path);
   }
 
@@ -73,6 +73,6 @@ function assets() {
   }
 
   wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
-  wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('sage_js', asset_path('scripts/index.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

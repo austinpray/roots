@@ -1,9 +1,6 @@
 @import "common/_variables";
 
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 @import "common/_global";
 @import "components/_buttons";
@@ -16,3 +13,7 @@
 @import "layouts/_footer";
 @import "layouts/_pages";
 @import "layouts/_posts";
+
+body {
+  background: url('../images/lady.jpg');
+}

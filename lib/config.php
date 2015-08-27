@@ -24,7 +24,7 @@ if (!defined('WP_ENV')) {
 
 if (!defined('DIST_DIR')) {
   // Path to the build directory for front-end assets
-  define('DIST_DIR', '/dist/');
+  define('DIST_DIR', '/dist');
 }
 
 /**

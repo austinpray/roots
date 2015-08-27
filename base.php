@@ -35,5 +35,6 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/footer');
       wp_footer();
     ?>
+    <script src="/main.bundle.js"></script>
   </body>
 </html>
